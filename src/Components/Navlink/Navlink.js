@@ -4,7 +4,7 @@ import CustomLink from '../CustomLink/CustomLink';
 
 const Navlink = ({item:{name,link}}) => {
     return (
-        <li className='ml-10 text-red-300'>
+        <li className='m-0 sm:ml-10 py-2 text-red-300'>
             <CustomLink to={link}>{name}</CustomLink>
         </li>
             
