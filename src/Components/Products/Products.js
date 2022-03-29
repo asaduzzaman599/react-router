@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import Food from '../Food/Food';
 
 const Products = () => {
@@ -17,8 +18,8 @@ const Products = () => {
         <div className='mt-10'>
             <input className='w-2/4 py-2 px-10 border' type="text" placeholder='Food Name' onChange={(e)=>setSearchText(e.target.value)}/>
             <button className='px-4 py-2 bg-lime-500 hover:bg-amber-700 text-white font-bold '>Seach</button>
-
-            <div className='grid md:grid-cols-3 w-4/5 mx-auto gap-4'>
+            <Outlet />
+            <div className='grid md:grid-cols-3 mt-4 w-4/5 mx-auto gap-4'>
                {
                     foods && foods.map(food=> <Food key={food.idMeal} food={food}></ Food>)
                }
